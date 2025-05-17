@@ -1,3 +1,5 @@
 FROM nodered/node-red
 
-# (Opcional) puedes añadir instalación de paquetes adicionales aquí
+# Instala dashboard y otros módulos globalmente
+RUN npm install node-red-dashboard \
+    node-red-contrib-mqtt-broker
