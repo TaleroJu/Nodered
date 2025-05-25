@@ -1,15 +1,16 @@
 FROM nodered/node-red
 
-# Instala dashboard y otros módulos globalmente
-RUN npm install node-red-dashboard \
-    node-red-contrib-mqtt-broker
+# Establecer el directorio de trabajo
+WORKDIR /data
 
-FROM nodered/node-red
-
-# Copiar tu flujo y settings.js personalizados
+# Copiar los flujos y configuración
 COPY FloWNube.json /data/FloWNube.json
 COPY settings.js /data/settings.js
 
-# Indicar a Node-RED que use /data como su userDir
+# Instalar nodos adicionales
+RUN npm install node-red-dashboard node-red-contrib-s7
+
+# Establecer la carpeta de usuario de Node-RED
 ENV NODE_RED_USER_DIR=/data
+
 
