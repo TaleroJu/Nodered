@@ -54,7 +54,7 @@
         "correl": "",
         "expiry": "",
         "broker": "160a561edce377dc",
-        "x": 550,
+        "x": 510,
         "y": 160,
         "wires": []
     },
@@ -106,7 +106,7 @@
         "correl": "",
         "expiry": "",
         "broker": "160a561edce377dc",
-        "x": 550,
+        "x": 510,
         "y": 260,
         "wires": []
     },
@@ -158,7 +158,7 @@
         "correl": "",
         "expiry": "",
         "broker": "160a561edce377dc",
-        "x": 550,
+        "x": 510,
         "y": 340,
         "wires": []
     },
@@ -232,7 +232,7 @@
         "name": "",
         "label": "Set Point °C",
         "tooltip": "",
-        "group": "1792d2d7fcd429ab",
+        "group": "8c1c3cd0e6bc0d22",
         "order": 4,
         "width": 0,
         "height": 0,
@@ -266,7 +266,7 @@
         "correl": "",
         "expiry": "",
         "broker": "160a561edce377dc",
-        "x": 550,
+        "x": 510,
         "y": 420,
         "wires": []
     },
@@ -297,7 +297,7 @@
         "type": "ui_chart",
         "z": "e91bd94679dbd9a4",
         "name": "",
-        "group": "1792d2d7fcd429ab",
+        "group": "8c1c3cd0e6bc0d22",
         "order": 6,
         "width": 0,
         "height": 0,
@@ -362,7 +362,7 @@
         "id": "6bc4fd823fb7130b",
         "type": "ui_text",
         "z": "e91bd94679dbd9a4",
-        "group": "1792d2d7fcd429ab",
+        "group": "8c1c3cd0e6bc0d22",
         "order": 5,
         "width": 0,
         "height": 0,
@@ -386,7 +386,7 @@
         "name": "",
         "label": "PID Compact",
         "tooltip": "",
-        "group": "1792d2d7fcd429ab",
+        "group": "bf762a863c9bf1e5",
         "order": 1,
         "width": 0,
         "height": 0,
@@ -405,7 +405,7 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 750,
+        "x": 930,
         "y": 160,
         "wires": [
             [
@@ -427,7 +427,7 @@
         "correl": "",
         "expiry": "",
         "broker": "160a561edce377dc",
-        "x": 960,
+        "x": 1140,
         "y": 160,
         "wires": []
     },
@@ -438,7 +438,7 @@
         "name": "",
         "label": "PID Discreto",
         "tooltip": "",
-        "group": "1792d2d7fcd429ab",
+        "group": "bf762a863c9bf1e5",
         "order": 1,
         "width": 0,
         "height": 0,
@@ -457,7 +457,7 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 750,
+        "x": 930,
         "y": 220,
         "wires": [
             [
@@ -479,7 +479,7 @@
         "correl": "",
         "expiry": "",
         "broker": "160a561edce377dc",
-        "x": 940,
+        "x": 1120,
         "y": 220,
         "wires": []
     },
@@ -490,7 +490,7 @@
         "name": "",
         "label": "Retro de Estados",
         "tooltip": "",
-        "group": "1792d2d7fcd429ab",
+        "group": "bf762a863c9bf1e5",
         "order": 1,
         "width": 0,
         "height": 0,
@@ -509,7 +509,7 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 750,
+        "x": 930,
         "y": 280,
         "wires": [
             [
@@ -531,14 +531,285 @@
         "correl": "",
         "expiry": "",
         "broker": "160a561edce377dc",
-        "x": 930,
+        "x": 1110,
         "y": 280,
         "wires": []
     },
     {
+        "id": "47083001ae1a75fc",
+        "type": "mqtt in",
+        "z": "e91bd94679dbd9a4",
+        "name": "",
+        "topic": "Prueba/PIDcompact/in",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "160a561edce377dc",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 740,
+        "y": 160,
+        "wires": [
+            [
+                "b25cd3b0f16583b7"
+            ]
+        ]
+    },
+    {
+        "id": "894d4e9adeab3a4c",
+        "type": "mqtt in",
+        "z": "e91bd94679dbd9a4",
+        "name": "",
+        "topic": "Prueba/PIDdis/in",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "160a561edce377dc",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 720,
+        "y": 220,
+        "wires": [
+            [
+                "9df0bce1653cc926"
+            ]
+        ]
+    },
+    {
+        "id": "670b65ea585515ab",
+        "type": "mqtt in",
+        "z": "e91bd94679dbd9a4",
+        "name": "",
+        "topic": "Prueba/Retro/in",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "160a561edce377dc",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 720,
+        "y": 280,
+        "wires": [
+            [
+                "7c296e789e4ef23d"
+            ]
+        ]
+    },
+    {
+        "id": "b824b0fe50b54c56",
+        "type": "ui_led",
+        "z": "e91bd94679dbd9a4",
+        "order": 0,
+        "group": "51bb7995b8415b8e",
+        "width": 0,
+        "height": 0,
+        "label": "Temperatura Maxima superada",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "tempMax",
+        "x": 1100,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "4878c83a97e6339b",
+        "type": "ui_led",
+        "z": "e91bd94679dbd9a4",
+        "order": 0,
+        "group": "51bb7995b8415b8e",
+        "width": 0,
+        "height": 0,
+        "label": "Paro de Emergencia Activo",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "PE",
+        "x": 1090,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "7f6ede070b8dc1e4",
+        "type": "ui_led",
+        "z": "e91bd94679dbd9a4",
+        "order": 0,
+        "group": "51bb7995b8415b8e",
+        "width": 0,
+        "height": 0,
+        "label": "Sistema activo Selecciona Controlador",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "SelCont",
+        "x": 1100,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "a3f469caa0496ff4",
+        "type": "ui_led",
+        "z": "e91bd94679dbd9a4",
+        "order": 0,
+        "group": "51bb7995b8415b8e",
+        "width": 0,
+        "height": 0,
+        "label": "Set Point Fuera de los limites",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "tempMax",
+        "x": 1100,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "7be179deab4c7b2b",
+        "type": "mqtt in",
+        "z": "e91bd94679dbd9a4",
+        "name": "",
+        "topic": "Prueba/Alm1",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "160a561edce377dc",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 910,
+        "y": 380,
+        "wires": [
+            [
+                "b824b0fe50b54c56"
+            ]
+        ]
+    },
+    {
+        "id": "96f4f241325e85b1",
+        "type": "mqtt in",
+        "z": "e91bd94679dbd9a4",
+        "name": "",
+        "topic": "Prueba/Alm2",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "160a561edce377dc",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 910,
+        "y": 440,
+        "wires": [
+            [
+                "4878c83a97e6339b"
+            ]
+        ]
+    },
+    {
+        "id": "e8ca39e0ed07cbf9",
+        "type": "mqtt in",
+        "z": "e91bd94679dbd9a4",
+        "name": "",
+        "topic": "Prueba/Alm3",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "160a561edce377dc",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 910,
+        "y": 500,
+        "wires": [
+            [
+                "7f6ede070b8dc1e4"
+            ]
+        ]
+    },
+    {
+        "id": "fae74a6d9cbebe4d",
+        "type": "mqtt in",
+        "z": "e91bd94679dbd9a4",
+        "name": "",
+        "topic": "Prueba/Alm4",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "160a561edce377dc",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 910,
+        "y": 560,
+        "wires": [
+            [
+                "a3f469caa0496ff4"
+            ]
+        ]
+    },
+    {
         "id": "1792d2d7fcd429ab",
         "type": "ui_group",
-        "name": "Proyecto Auto",
+        "name": "Botones Control",
         "tab": "b93a04c8161313b6",
         "order": 1,
         "disp": true,
@@ -579,9 +850,42 @@
         "sessionExpiry": ""
     },
     {
+        "id": "8c1c3cd0e6bc0d22",
+        "type": "ui_group",
+        "name": "Grafica",
+        "tab": "b93a04c8161313b6",
+        "order": 2,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "bf762a863c9bf1e5",
+        "type": "ui_group",
+        "name": "Seleccion Controlador",
+        "tab": "b93a04c8161313b6",
+        "order": 3,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "51bb7995b8415b8e",
+        "type": "ui_group",
+        "name": "Alarmas",
+        "tab": "b93a04c8161313b6",
+        "order": 4,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
         "id": "b93a04c8161313b6",
         "type": "ui_tab",
-        "name": "Tabla",
+        "name": "Proyecto Auto",
         "icon": "dashboard",
         "disabled": false,
         "hidden": false
